@@ -1,12 +1,14 @@
 
+
 var listaNumeros = [];
 var listaSorteados = [];
 
-for (let index = 1; index <= 90; index++) {
-    listaNumeros.push(index);
-}
-
 function SortearNumero() {
+
+    for (let index = 1; index <= 90; index++) {
+        listaNumeros.push(index);
+    }
+
     var visualizarNumero = document.getElementById('numeroSorteado');
     var jaSorteados = document.getElementById('listaSorteados');
 
@@ -20,5 +22,19 @@ function SortearNumero() {
 
     visualizarNumero.innerHTML = numeroSorteado;
     jaSorteados.innerHTML = listaSorteados.join(' - ');
+}
+
+function resetarNumero() {
+    listaNumeros = [];
+    listaSorteados = [];
+
+    for (let index = 1; index <= 90; index++) {
+        listaNumeros.push(index);
+    }
+    var visualizarNumero = document.getElementById('numeroSorteado');
+    var jaSorteados = document.getElementById('listaSorteados');
+
+    visualizarNumero.innerHTML = "00";
+    jaSorteados.innerHTML = "00";
 }
 
