@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h2>Bingo Automatico</h2>
-    <button onclick="SortearNumero()">Sortear numero</button>
-    <button onclick="resetarNumero()">Resetar</button>
-    <div>
-      <p id="listaSorteados">00</p>
-      <p id="numeroSorteado">00</p>
-    </div>
-    <script src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="container">
+    <h1>🎱 Bingo Automático</h1>
+    <p class="subtitulo"> Clique no botão para sortear um novo número </p>
+    <section class="numero-atual">
+      <h2>Número sorteado</h2>
+      <div id="numeroSorteado" class="bola bola-atual"> 00 </div>
+    </section>
+    <div class="botoes"> <button class="btn-sortear" onclick="SortearNumero()"> 🎲 Sortear número </button> <button
+        class="btn-resetar" onclick="resetarNumero()"> 🔄 Resetar </button> </div>
+    <section class="historico">
+      <h2>Números já sorteados</h2>
+      <div id="listaSorteados" class="lista-bolas"> </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

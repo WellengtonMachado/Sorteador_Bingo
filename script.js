@@ -20,7 +20,9 @@ function SortearNumero() {
     listaSorteados.push(numeroSorteado);
 
     visualizarNumero.innerHTML = numeroSorteado;
-    jaSorteados.innerHTML = listaSorteados.join(' - ');
+    jaSorteados.innerHTML = listaSorteados
+        .map((numero) => `<span class="bola">${numero}</span>`)
+        .join('');
 }
 
 function resetarNumero() {
